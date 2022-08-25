@@ -13,7 +13,8 @@ hexo.config.feed = Object.assign({
   content_limit_delim: '',
   order_by: '-date',
   autodiscovery: true,
-  template: ''
+  template: '',
+  tags: []
 }, hexo.config.feed);
 
 const config = hexo.config.feed;

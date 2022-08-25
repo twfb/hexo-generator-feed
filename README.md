@@ -9,7 +9,7 @@ Generate Atom 1.0 or RSS 2.0 feed.
 ## Install
 
 ``` bash
-$ npm install hexo-generator-feed --save
+$ npm install twfb/hexo-generator-feed --save
 ```
 
 - Hexo 4+: 2.x
@@ -38,6 +38,7 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+  tags:
 ```
 - **enable** - Enables or disables this plugin. Enabled by default.
 - **type** - Feed type. `atom` or `rss2`. Specify `['atom', 'rss2']` to output both types. (Default: `atom`)
@@ -54,6 +55,8 @@ feed:
     path:
       - atom.xml
       - rss2.xml
+    tags:
+      - rss
   ```
 - **path** - Feed path. When both types are specified, path must follow the order of type value. (Default: atom.xml/rss2.xml)
 - **limit** - Maximum number of posts in the feed (Use `0` or `false` to show all posts)
@@ -81,4 +84,4 @@ feed:
       - ./source/custom.xml
     # atom will be generated using custom.xml
     # rss2 will be generated using the default template instead
-  ```
+- **tags** - (optional) Only generate feed for posts that contain tags set in the configuration
